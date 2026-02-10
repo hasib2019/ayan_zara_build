@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
         Route::post('/set-shipping-address', 'set_shipping_address')->name('pos.set-shipping-address');
         Route::post('/pos-order-summary', 'get_order_summary')->name('pos.getOrderSummary');
         Route::post('/pos-order', 'order_store')->name('pos.order_place');
-        Route::get('/pos-activation', 'configuration')->name('poin-of-sales.activation');
+        Route::get('/pos-activation', 'pos_activation')->name('poin-of-sales.activation');
         Route::get('/pos/thermal-printer/{order_id}', 'invoice')->name('admin.invoice.thermal_printer');
         Route::get('/pos/search-customers', 'getCustomers')->name('pos.search-customers');
         Route::get('/pos-orders', 'posOrders')->name('pos.orders');
